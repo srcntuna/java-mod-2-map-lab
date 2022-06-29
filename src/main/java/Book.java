@@ -16,11 +16,11 @@ public class Book {
   }
 
   public String getTitle() {
-    return title;
+    return title.toLowerCase();
   }
 
   public String getGenre() {
-    return genre;
+    return genre.toLowerCase();
   }
 
   public int getNumOfPages() {

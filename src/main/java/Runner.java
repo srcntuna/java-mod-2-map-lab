@@ -52,7 +52,7 @@ public class Runner {
 
             Book newBook = new Book(inputTitle, inputGenre, inputNum);
 
-            library.addBook(inputTitle, newBook);
+            library.addBook(inputTitle.toLowerCase(), newBook);
 
             System.out.println(inputTitle + " has been added to the Library!");
             System.out.println("Do you want to add more books to the library? (y/n):");
@@ -88,7 +88,7 @@ public class Runner {
 
             }
 
-            System.out.println("Do you want to lookup more books to the library? (y/n):");
+            System.out.println("Do you want to lookup more books at the library? (y/n):");
             String answer = scanner.nextLine();
 
             if (answer.equals("n")) {

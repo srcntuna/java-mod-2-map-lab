@@ -6,20 +6,22 @@ public class Library {
 
   public Library() {
     this.library = new HashMap<>();
-    library.put("Beloved", new Book("Beloved", "Fiction", 300));
-    library.put("DoctorZivago", new Book("DoctorZivago", "Romance", 450));
+    var beloved = new Book("Beloved", "Fiction", 300);
+    library.put(beloved.getTitle(), beloved);
+    var doktorZivago = new Book("DoctorZivago", "Romance", 450);
+    library.put(doktorZivago.getTitle(), doktorZivago);
 
   }
 
   public void addBook(String title, Book book) {
 
-    library.put(title, book);
+    library.put(title.toLowerCase(), book);
 
   }
 
   public Book getBook(String title) {
 
-    return library.get(title);
+    return library.get(title.toLowerCase());
 
   }
 
